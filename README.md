@@ -1,5 +1,5 @@
 <h1>Range slider plugin</h1>
-<a href="https://vlgdev.github.io/plugin/">Демо</a>
+<a href="https://vlgdev.github.io/RangeSlider/">Демо</a>
 
 <h2>Установка пакетов</h2>
 <pre>npm i</pre>
