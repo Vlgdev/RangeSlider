@@ -1,0 +1,47 @@
+@import "./global";
+@import "./fonts";
+@import "./vars";
+body{
+    padding-top: 100px;
+    font-family: 'Roboto';
+}
+.slider{
+    max-width: 100%;
+    width: 100%;
+    &-wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+}
+
+.main-slider,
+.uncommon-slider,
+.third-slider{
+    max-width: 100%;
+    width: 100%;
+}
+
+.config{
+    max-width: 500px;
+    width: 100%;
+    margin-left: 20px;
+    &__title{
+        text-align: center;
+        font-weight: 700;
+        font-size: 18px;
+        margin: 10px 0;
+    }
+    &__input{
+        display: block;
+        margin-top: 3px;
+        margin-bottom: 5px;
+    }
+    &__checkbox{
+        margin-right: 5px;
+        margin-bottom: 5px;
+    }
+}
+
+@import "./media";

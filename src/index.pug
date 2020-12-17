@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+html
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Range Slider
+    body
+        include components/config.pug
+        .slider-wrapper
+            .slider
+            +config('slider')
+        .slider-wrapper
+            .main-slider
+            +config('main-slider')
+        .slider-wrapper
+            .third-slider
+            +config('third-slider')
+        .slider-wrapper
+            .uncommon-slider
+            +config('uncommon-slider')
