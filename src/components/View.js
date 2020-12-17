@@ -39,11 +39,11 @@ export default class View {
             fsdInner = this.renderStandart(model, fsdInner)
             const fsd = model.target.querySelector('.fsd')
             fsd.classList.remove('fsd-interval')
-            fsd.querySelector('.fsd__inner')?.remove()
+            fsd.querySelector('.fsd__inner').remove()
             fsd.prepend(fsdInner)
             this.setStandart(model)
         } else if (isScaleOfValues) {
-            model.target.querySelector('.fsd__scale')?.remove()
+            model.target.querySelector('.fsd__scale').remove()
             let fsd = model.target.querySelector('.fsd')
             fsd = this.renderScale(model, fsd)
             model.target.append(fsd)
@@ -149,14 +149,16 @@ export default class View {
         endIntervalWrapper.append(endInterval)
 
         if (model.target.querySelector('.fsd__inner')) {
-            model.target.querySelector('.fsd__interval').remove()
+            const existInterval = model.target.querySelector('.fsd__interval')
+            if (existInterval) existInterval.remove()
             model.target.querySelectorAll('.fsd__slider-wrapper').forEach(elem => {
                 elem.remove()
             })
             model.target.querySelectorAll('.fsd__prompt').forEach(elem => {
                 elem.remove()
             })
-            model.target.querySelector('.fsd__progress').remove()
+            const existProgress = model.target.querySelector('.fsd__progress')
+            if (existProgress) existProgress.remove()
         }
 
         let progressBar
@@ -199,8 +201,10 @@ export default class View {
             model.target.querySelectorAll('.fsd__prompt').forEach(elem => {
                 elem.remove()
             })
-            model.target.querySelector('.fsd__progress')?.remove()
-            model.target.querySelector('.fsd')?.classList.remove('fsd__interval')
+            const existProgress = model.target.querySelector('.fsd__progress')
+            if (existProgress) existProgress.remove()
+            const existFsd = model.target.querySelector('.fsd')
+            if (existFsd) existFsd.classList.remove('fsd__interval')
         }
 
         if (model.prompt === true)
